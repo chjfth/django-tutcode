@@ -37,7 +37,8 @@ INSTALLED_APPS = [
 #	'django.contrib.sessions',
 #	'django.contrib.messages',
 #	'django.contrib.staticfiles',
-	'one_to_one'
+	'one_to_one',
+	'topicsdbquery',
 ]
 
 xxx_MIDDLEWARE = [
