@@ -39,6 +39,7 @@ INSTALLED_APPS = [
 #	'django.contrib.staticfiles',
 	'one_to_one',
 	'topicsdbquery',
+	'aggregation',
 ]
 
 xxx_MIDDLEWARE = [
