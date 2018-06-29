@@ -20,7 +20,7 @@ urlpatterns = [
 
 	# old: before tut04 generic view (ngv=non-generic view)
     # ex: /polls/ngv
-    url(r'^$/ngv', views.index_ngv, name='index_ngv'),
+    url(r'^ngv$', views.index_ngv, name='index_ngv'),
     # ex: /polls/5/ngv
     url(r'^(?P<question_id>[0-9]+)/ngv$', views.detail_ngv, name='detail_ngv'),
     # ex: /polls/5/results/ngv

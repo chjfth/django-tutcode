@@ -52,7 +52,6 @@ def index_ngv(request): # tut04: non-generic view
 	return render(request, 'polls/index.html', context)
 
 
-
 #def detail(request, question_id):
 #	return HttpResponse("You're looking at question %s." % question_id)
 
@@ -70,6 +69,7 @@ def results_ngv(request, question_id): # tut04: non-generic view
 	return render(request, 'polls/results.html', {'question': question})
 
 
+#
 # Use generic views 
 # https://docs.djangoproject.com/en/1.11/intro/tutorial04/#use-generic-views-less-code-is-better
 #
