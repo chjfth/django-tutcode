@@ -11,6 +11,16 @@ from django.template import loader
 
 from .models import Question
 
+# plain-old index view from: 
+# https://docs.djangoproject.com/en/1.11/intro/tutorial03/#write-views-that-actually-do-something
+def index0(request):
+    latest_question_list = Question.objects.order_by('-pub_date')[:5]
+    output = ', '.join([q.question_text for q in latest_question_list])
+    return HttpResponse(output)
+
+
+# first template expansion example from:
+# https://docs.djangoproject.com/en/1.11/intro/tutorial03/#write-views-that-actually-do-something
 def index(request):
 	latest_question_list = Question.objects.order_by('-pub_date')[:5]
 	template = loader.get_template('polls/index.html')

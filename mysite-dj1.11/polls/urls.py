@@ -14,4 +14,7 @@ urlpatterns = [
 
     # ex: /polls/5/vote/
     url(r'^(?P<question_id>[0-9]+)/vote/$', views.vote, name='vote'),
+
+	# historical old:
+	url(r'^index0$', views.index0, name='index0'),
 ]
