@@ -35,10 +35,20 @@ def index1(request):
 # Using shortcut function: render()
 # https://docs.djangoproject.com/en/1.11/intro/tutorial03/#a-shortcut-render
 #
+def index_hardurl(request):
+	latest_question_list = Question.objects.order_by('-pub_date')[:5]
+	context = {'latest_question_list': latest_question_list}
+	return render(request, 'polls/index_hardurl.html', context)
+
+# Improvement: Removing hardcoded URLs in templates
+# https://docs.djangoproject.com/en/1.11/intro/tutorial03/#removing-hardcoded-urls-in-templates
+#
 def index(request):
 	latest_question_list = Question.objects.order_by('-pub_date')[:5]
 	context = {'latest_question_list': latest_question_list}
 	return render(request, 'polls/index.html', context)
+
+
 
 #def detail(request, question_id):
 #	return HttpResponse("You're looking at question %s." % question_id)

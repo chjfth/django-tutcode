@@ -18,4 +18,5 @@ urlpatterns = [
 	# historical old:
 	url(r'^index0$', views.index0, name='index0'),
 	url(r'^index1$', views.index1, name='index1'),
+	url(r'^index_hardurl$', views.index_hardurl, name='index_hardurl'),
 ]
