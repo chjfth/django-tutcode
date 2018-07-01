@@ -1,4 +1,8 @@
-<h3>(non-hard url links)</h1>
+{% load static %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'polls/style.css' %}" />
+
+<h3>Latest 5 questions:</h1>
 
 {% if latest_question_list %}
 	<ul>
