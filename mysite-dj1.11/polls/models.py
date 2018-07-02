@@ -16,6 +16,11 @@ class Question(models.Model):
 		now = timezone.now()
 		return now >= self.pub_date >= timezone.now() - datetime.timedelta(days=1)
 
+	# https://docs.djangoproject.com/en/1.11/intro/tutorial07/#customize-the-admin-change-list
+	was_published_recently.admin_order_field = 'pub_date' # tell order rule of this column
+	was_published_recently.boolean = True # tell datatype, boolean make the value display as a tick/cross
+	was_published_recently.short_description = 'Published recently?' # customize column header text
+
 
 class Choice(models.Model):
 	question = models.ForeignKey(Question, on_delete=models.CASCADE)
