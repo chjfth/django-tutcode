@@ -22,3 +22,7 @@ urlpatterns = [
 	url(r'^admin/', admin.site.urls), 
 ]
 
+# Tested below 3 lines, it really can override Http404 processing
+#from django.conf.urls import handler404
+#from polls import views
+#handler404 = views.index_ngv # a test
