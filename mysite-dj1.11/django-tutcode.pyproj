@@ -4,10 +4,10 @@
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <Name>mysite1</Name>
     <RootNamespace>mysite1</RootNamespace>
-    <InterpreterId>{7b2637d4-1ddb-48df-880e-f9fdd81a4397}</InterpreterId>
-    <InterpreterVersion>2.7</InterpreterVersion>
+    <InterpreterId>{1c27c4b1-7b21-4beb-a15a-9924f6f3cb87}</InterpreterId>
+    <InterpreterVersion>3.5</InterpreterVersion>
     <WebBrowserPort>8003</WebBrowserPort>
-    <DjangoSettingsModule>settings</DjangoSettingsModule>
+    <DjangoSettingsModule>mysite.settings</DjangoSettingsModule>
     <PythonRunWebServerCommandArguments>runserver --settings $(DjangoSettingsModule) 0.0.0.0:%SERVER_PORT% $(CommandLineArguments)</PythonRunWebServerCommandArguments>
     <PythonDebugWebServerCommandArguments>runserver --noreload --settings $(DjangoSettingsModule) 0.0.0.0:%SERVER_PORT% $(CommandLineArguments)</PythonDebugWebServerCommandArguments>
   </PropertyGroup>
@@ -33,27 +33,43 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="formtest\admin.py" />
+    <Compile Include="formtest\apps.py" />
+    <Compile Include="formtest\migrations\__init__.py" />
+    <Compile Include="formtest\models.py" />
+    <Compile Include="formtest\tests.py" />
+    <Compile Include="formtest\urls.py" />
+    <Compile Include="formtest\views.py" />
+    <Compile Include="formtest\__init__.py" />
     <Compile Include="manage.py" />
-    <Compile Include="settings.py" />
-    <Compile Include="urls.py" />
-    <Compile Include="views.py" />
+    <Compile Include="mysite\settings.py" />
+    <Compile Include="mysite\urls.py" />
+    <Compile Include="mysite\wsgi.py" />
+    <Compile Include="mysite\__init__.py" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="requirements.txt" />
     <Content Include="db.sqlite3" />
+    <Content Include="formtest\templates\formtest\mtform.html" />
   </ItemGroup>
   <ItemGroup>
-    <Interpreter Include="..\..\venv\env27j1\">
-      <Id>{7b2637d4-1ddb-48df-880e-f9fdd81a4397}</Id>
+    <Interpreter Include="..\..\..\venv\env35j1\">
+      <Id>{1c27c4b1-7b21-4beb-a15a-9924f6f3cb87}</Id>
       <BaseInterpreter>{2af0f10d-7135-4994-9156-5d01c9c11b7e}</BaseInterpreter>
-      <Version>2.7</Version>
-      <Description>env27j1 (Python 2.7)</Description>
+      <Version>3.5</Version>
+      <Description>env35j1 (Python 3.5)</Description>
       <InterpreterPath>Scripts\python.exe</InterpreterPath>
       <WindowsInterpreterPath>Scripts\pythonw.exe</WindowsInterpreterPath>
       <LibraryPath>Lib\</LibraryPath>
       <PathEnvironmentVariable>PYTHONPATH</PathEnvironmentVariable>
       <Architecture>X86</Architecture>
     </Interpreter>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="formtest\" />
+    <Folder Include="formtest\migrations\" />
+    <Folder Include="formtest\templates\" />
+    <Folder Include="formtest\templates\formtest\" />
+    <Folder Include="mysite\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.Django.targets" />
   <!-- Specify pre- and post-build commands in the BeforeBuild and 
