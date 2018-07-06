@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8"/>
+	<title>Multipart form-data</title>
+</head>
+<body>
+	<form action="" method="post" enctype="multipart/form-data"> 
+		{% csrf_token %}
+		<p><input type="text" name="text1" value="text default">
+		<p><input type="text" name="text2" value="a&#x03C9;b">
+		<p><input type="file" name="file1" value="a.txt">
+		<p><input type="file" name="file2" file="a.html">
+		<p><input type="file" name="file3" filename="a.bin">
+		<p><button type="submit">Submit</button>
+	</form>
+</body>
+</html>

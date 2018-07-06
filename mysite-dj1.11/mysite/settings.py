@@ -33,6 +33,7 @@ ALLOWED_HOSTS = ['*']
 INSTALLED_APPS = [
 	
 	'polls.apps.PollsConfig',
+	'formtest',
 	
 	'django.contrib.admin',
 	'django.contrib.auth',
